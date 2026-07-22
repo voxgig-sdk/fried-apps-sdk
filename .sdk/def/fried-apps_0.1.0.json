@@ -1,0 +1,98 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Fried Apps API",
+    "description": "The Fried Apps API allows users to generate temporary email addresses with just one click. It enables users to receive emails directly in their browser toolbar without the need for sign-up.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/friedapps"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.friedapps.com",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/temp-mail/domains": {
+      "get": {
+        "summary": "Get domains list",
+        "description": "Retrieves a list of available temporary email domains that can be used for generating temporary email addresses.",
+        "operationId": "getDomains",
+        "tags": [
+          "Temporary Email"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of available domains",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "domains": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "List of available email domains"
+                    }
+                  }
+                },
+                "examples": {
+                  "domainsExample": {
+                    "value": {
+                      "domains": [
+                        "example1.com",
+                        "example2.com",
+                        "example3.com"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "message": {
+            "type": "string",
+            "description": "Detailed error description"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Temporary Email",
+      "description": "Operations related to temporary email generation and management"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository",
+    "url": "https://github.com/l0v3m0n3y/friedapps"
+  }
+}

@@ -1,0 +1,38 @@
+# Entity: temporary_email
+
+main: kit: entity: temporary_email: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "domain"
+      req: false
+      type: "`$ARRAY`"
+    }
+  ]
+
+  name: "temporary_email"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          method: "GET"
+          orig: "/temp-mail/domains"
+          parts: [
+            "temp-mail"
+            "domains"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

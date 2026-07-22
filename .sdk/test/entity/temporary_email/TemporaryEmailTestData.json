@@ -1,0 +1,22 @@
+{
+  "existing": {
+    "temporary_email": {
+      "TEMPORARY_EMAIL00": {
+        "domain": []
+      },
+      "TEMPORARY_EMAIL01": {
+        "domain": []
+      },
+      "TEMPORARY_EMAIL02": {
+        "domain": []
+      }
+    }
+  },
+  "new": {
+    "temporary_email": {
+      "temporary_email_ref01": {
+        "domain": []
+      }
+    }
+  }
+}

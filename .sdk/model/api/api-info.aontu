@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/friedapps"
+      }
+      description: "The Fried Apps API allows users to generate temporary email addresses with just one click. It enables users to receive emails directly in their browser toolbar without the need for sign-up."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://api.friedapps.com"
+        }
+      ]
+      summary: "The Fried Apps API allows users to generate temporary email addresses with just one click."
+      title: "Fried Apps API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/friedapps"
+    }
+  }
+}
+
