@@ -23,8 +23,8 @@ module FriedAppsTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("FRIEDAPPS_TEST_LIVE")
-    override = getenv("FRIEDAPPS_TEST_OVERRIDE")
+    live = getenv("FRIED_APPS_TEST_LIVE")
+    override = getenv("FRIED_APPS_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module FriedAppsTestRunner
       end
     end
 
-    explain = getenv("FRIEDAPPS_TEST_EXPLAIN")
-    m["FRIEDAPPS_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("FRIED_APPS_TEST_EXPLAIN")
+    m["FRIED_APPS_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

@@ -260,7 +260,7 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"domain"` |  |
+| `"domains"` |  |
 
 Operations: List.
 
@@ -285,7 +285,7 @@ Create an instance: `temporaryEmail := client.TemporaryEmail(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domain` | `[]any` |  |
+| `domains` | `[]any` |  |
 
 #### Example: List
 

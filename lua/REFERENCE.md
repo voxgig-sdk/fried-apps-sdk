@@ -90,7 +90,7 @@ local temporary_email = client:TemporaryEmail(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `domain` | `table` | No |  |
+| `domains` | `table` | No |  |
 
 ### Operations
 

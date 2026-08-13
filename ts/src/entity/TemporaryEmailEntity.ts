@@ -37,7 +37,7 @@ class TemporaryEmailEntity extends FriedAppsEntityBase<TemporaryEmail> {
 
 
 
-  async list(this: any, reqmatch?: TemporaryEmailListMatch, ctrl?: Control): Promise<TemporaryEmail[]> {
+  async list(this: any, reqmatch?: TemporaryEmailListMatch, ctrl?: Control): Promise<TemporaryEmailEntity[]> {
 
     const utility = this._utility
 

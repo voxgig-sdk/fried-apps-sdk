@@ -93,7 +93,7 @@ temporary_email = client.TemporaryEmail
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `domain` | `Array` | No |  |
+| `domains` | `Array` | No |  |
 
 ### Operations
 

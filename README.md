@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = FriedAppsSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = FriedAppsSDK.test({
+  entity: {
+    temporary_email: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const temporaryemails = await client.TemporaryEmail().list()
-// temporaryemails is an array of bare TemporaryEmail records populated with mock data
+// temporaryemails is an array of TemporaryEmail entities, populated with mock data
+// — call temporaryemails[0].data() for the record itself
 console.log(temporaryemails)
 ```
 
@@ -110,7 +119,7 @@ import { FriedAppsSDK } from '@voxgig-sdk/fried-apps'
 
 const client = new FriedAppsSDK()
 
-// List all temporaryemails (returns TemporaryEmail[])
+// List all temporaryemails (returns TemporaryEmailEntity[] — .data() for the record)
 const temporaryemails = await client.TemporaryEmail().list()
 for (const temporaryemail of temporaryemails) {
   console.log(temporaryemail)
@@ -343,6 +352,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/friedapps](https://github.com/l0v3m0n3y/friedapps)
 

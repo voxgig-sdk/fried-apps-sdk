@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import FriedAppsControl
-from core.error import FriedAppsError
-from core.result import FriedAppsResult
-from core.spec import FriedAppsSpec
+from projectname_sdk.config import make_config
+from projectname_sdk.features import _make_feature
+from projectname_sdk.core.control import FriedAppsControl
+from projectname_sdk.core.error import FriedAppsError
+from projectname_sdk.core.result import FriedAppsResult
+from projectname_sdk.core.spec import FriedAppsSpec
 
 
 # True when this SDK was generated with the named feature.

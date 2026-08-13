@@ -43,7 +43,7 @@ local temporaryemails, err = client:TemporaryEmail():list()
 if err then error(err) end
 
 for _, item in ipairs(temporaryemails) do
-  print(item["domain"])
+  print(item["domains"])
 end
 ```
 
@@ -218,9 +218,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local temporary_email, err = client:TemporaryEmail():load()
+    local temporary_email, err = client:TemporaryEmail():list()
     if err then error(err) end
-    -- temporary_email is the loaded record
+    -- temporary_email is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -231,7 +231,7 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `domain` |  |
+| `domains` |  |
 
 Operations: List.
 
@@ -256,7 +256,7 @@ Create an instance: `local temporary_email = client:TemporaryEmail(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domain` | `table` |  |
+| `domains` | `table` |  |
 
 #### Example: List
 

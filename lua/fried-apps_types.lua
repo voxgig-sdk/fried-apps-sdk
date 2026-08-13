@@ -7,10 +7,10 @@
 -- edit by hand.
 
 ---@class TemporaryEmail
----@field domain? table
+---@field domains? table
 
 ---@class TemporaryEmailListMatch
----@field domain? table
+---@field domains? table
 
 local M = {}
 

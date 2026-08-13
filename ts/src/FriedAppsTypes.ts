@@ -6,10 +6,10 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 
 export interface TemporaryEmail {
-  domain?: any[]
+  domains?: any[]
 }
 
 export interface TemporaryEmailListMatch {
-  domain?: any[]
+  domains?: any[]
 }
 

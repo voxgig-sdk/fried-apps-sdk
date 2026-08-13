@@ -26,8 +26,8 @@ import {
 describe('TemporaryEmailEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when FRIEDAPPS_TEST_LIVE=TRUE.
-  afterEach(liveDelay('FRIEDAPPS_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when FRIED_APPS_TEST_LIVE=TRUE.
+  afterEach(liveDelay('FRIED_APPS_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = FriedAppsSDK.test()
@@ -63,7 +63,7 @@ describe('TemporaryEmailEntity', async () => {
     const temporary_email_ref01_ent = client.TemporaryEmail()
     const temporary_email_ref01_match: any = {}
 
-    const temporary_email_ref01_list = await temporary_email_ref01_ent.list(temporary_email_ref01_match)
+    const temporary_email_ref01_list = (await temporary_email_ref01_ent.list(temporary_email_ref01_match)).map((e: any) => e.data())
 
 
   })

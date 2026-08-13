@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# FriedApps SDK exists test
 
 import pytest
 from friedapps_sdk import FriedAppsSDK

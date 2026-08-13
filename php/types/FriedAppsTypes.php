@@ -15,12 +15,12 @@ declare(strict_types=1);
 /** TemporaryEmail entity data model. */
 class TemporaryEmail
 {
-    public ?array $domain = null;
+    public ?array $domains = null;
 }
 
 /** Request payload for TemporaryEmail#list. */
 class TemporaryEmailListMatch
 {
-    public ?array $domain = null;
+    public ?array $domains = null;
 }
 

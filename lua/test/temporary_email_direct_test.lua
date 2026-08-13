@@ -61,11 +61,11 @@ function temporary_email_direct_setup(mockres)
   local calls = {}
 
   local env = runner.env_override({
-    ["FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID"] = {},
-    ["FRIEDAPPS_TEST_LIVE"] = "FALSE",
+    ["FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID"] = {},
+    ["FRIED_APPS_TEST_LIVE"] = "FALSE",
   })
 
-  local live = env["FRIEDAPPS_TEST_LIVE"] == "TRUE"
+  local live = env["FRIED_APPS_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {

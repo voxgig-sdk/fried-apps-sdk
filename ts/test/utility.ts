@@ -62,8 +62,8 @@ function makeCtrl(explain: boolean) {
 // Overrides configuration values with environment variables if available
 function envOverride(m: Record<string, any>) {
   if (
-    'TRUE' === process.env.FRIEDAPPS_TEST_LIVE ||
-    'TRUE' === process.env.FRIEDAPPS_TEST_OVERRIDE
+    'TRUE' === process.env.FRIED_APPS_TEST_LIVE ||
+    'TRUE' === process.env.FRIED_APPS_TEST_OVERRIDE
   ) {
     Object.entries(m).map(n => {
       let envval = process.env[n[0]]
@@ -74,7 +74,7 @@ function envOverride(m: Record<string, any>) {
     })
   }
 
-  m.FRIEDAPPS_TEST_EXPLAIN = process.env.FRIEDAPPS_TEST_EXPLAIN || m.FRIEDAPPS_TEST_EXPLAIN
+  m.FRIED_APPS_TEST_EXPLAIN = process.env.FRIED_APPS_TEST_EXPLAIN || m.FRIED_APPS_TEST_EXPLAIN
 
   return m
 }

@@ -10,19 +10,19 @@
 
 # TemporaryEmail entity data model.
 #
-# @!attribute [rw] domain
+# @!attribute [rw] domains
 #   @return [Array, nil]
 TemporaryEmail = Struct.new(
-  :domain,
+  :domains,
   keyword_init: true
 )
 
 # Request payload for TemporaryEmail#list.
 #
-# @!attribute [rw] domain
+# @!attribute [rw] domains
 #   @return [Array, nil]
 TemporaryEmailListMatch = Struct.new(
-  :domain,
+  :domains,
   keyword_init: true
 )
 

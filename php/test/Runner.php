@@ -43,8 +43,8 @@ class FriedAppsTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('FRIEDAPPS_TEST_LIVE');
-        $override = self::getenv('FRIEDAPPS_TEST_OVERRIDE');
+        $live = self::getenv('FRIED_APPS_TEST_LIVE');
+        $override = self::getenv('FRIED_APPS_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class FriedAppsTestRunner
             }
         }
 
-        $explain = self::getenv('FRIEDAPPS_TEST_EXPLAIN');
+        $explain = self::getenv('FRIED_APPS_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['FRIEDAPPS_TEST_EXPLAIN'] = $explain;
+            $m['FRIED_APPS_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;

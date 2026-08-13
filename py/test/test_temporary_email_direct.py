@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from friedapps_sdk.utility.voxgig_struct import voxgig_struct as vs
 from friedapps_sdk import FriedAppsSDK
-from core import helpers
+from friedapps_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _temporary_email_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID": {},
-        "FRIEDAPPS_TEST_LIVE": "FALSE",
+        "FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID": {},
+        "FRIED_APPS_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("FRIEDAPPS_TEST_LIVE") == "TRUE"
+    live = env.get("FRIED_APPS_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

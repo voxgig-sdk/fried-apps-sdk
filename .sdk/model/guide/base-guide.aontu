@@ -8,6 +8,7 @@ guide: {
   entity: temporary_email: {
     path: "/temp-mail/domains": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.domains`")|top
     }
   }
 

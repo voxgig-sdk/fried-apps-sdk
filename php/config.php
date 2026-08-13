@@ -32,7 +32,7 @@ class FriedAppsConfig
           'fields' => [
             [
               'active' => true,
-              'name' => 'domain',
+              'name' => 'domains',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 0,
@@ -47,6 +47,7 @@ class FriedAppsConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/temp-mail/domains',
                   'parts' => [
@@ -56,7 +57,7 @@ class FriedAppsConfig
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
-                    'res' => '`body`',
+                    'res' => '`body.domains`',
                   ],
                   'index$' => 0,
                 ],

@@ -6,7 +6,7 @@ main: kit: entity: temporary_email: {
 
   fields: [
     {
-      name: "domain"
+      name: "domains"
       req: false
       type: "`$ARRAY`"
     }
@@ -26,7 +26,7 @@ main: kit: entity: temporary_email: {
           ]
           transform: {
             req: "`reqdata`"
-            res: "`body`"
+            res: "`body.domains`"
           }
         }
       ]

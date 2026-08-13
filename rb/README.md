@@ -37,7 +37,7 @@ begin
   # list returns an Array of TemporaryEmail records — iterate directly.
   temporaryemails = client.TemporaryEmail.list
   temporaryemails.each do |item|
-    puts "#{item["domain"]}"
+    puts "#{item["domains"]}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -119,7 +119,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = FriedAppsSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 temporaryemail = client.TemporaryEmail.list()
 puts temporaryemail
 ```
@@ -236,7 +237,7 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `domain` |  |
+| `domains` |  |
 
 Operations: List.
 
@@ -261,7 +262,7 @@ Create an instance: `temporary_email = client.TemporaryEmail`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domain` | `Array` |  |
+| `domains` | `Array` |  |
 
 #### Example: List
 

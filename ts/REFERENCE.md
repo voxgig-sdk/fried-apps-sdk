@@ -116,7 +116,7 @@ const temporary_email = client.TemporaryEmail()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `domain` | `any[]` | No |  |
+| `domains` | `any[]` | No |  |
 
 ### Operations
 

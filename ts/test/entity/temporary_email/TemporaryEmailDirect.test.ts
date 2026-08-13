@@ -19,11 +19,15 @@ import {
 describe('TemporaryEmailDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when FRIEDAPPS_TEST_LIVE=TRUE.
-  afterEach(liveDelay('FRIEDAPPS_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when FRIED_APPS_TEST_LIVE=TRUE.
+  afterEach(liveDelay('FRIED_APPS_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new FriedAppsSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -77,17 +81,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID': {},
-    'FRIEDAPPS_TEST_LIVE': 'FALSE',
+    'FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID': {},
+    'FRIED_APPS_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.FRIEDAPPS_TEST_LIVE
+  const live = 'TRUE' === env.FRIED_APPS_TEST_LIVE
 
   if (live) {
     const client = new FriedAppsSDK({
     })
 
-    let idmap: any = env['FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID']
+    let idmap: any = env['FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

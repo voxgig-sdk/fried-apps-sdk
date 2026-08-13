@@ -35,7 +35,9 @@ const client = new FriedAppsSDK()
 
 ### 2. List temporaryemail records
 
-`list()` resolves to an array of TemporaryEmail objects — iterate it directly:
+`list()` resolves to an array of TemporaryEmail ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const temporaryemails = await client.TemporaryEmail().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = FriedAppsSDK.test()
 
 const temporaryemail = await client.TemporaryEmail().list()
-// temporaryemail is a bare entity populated with mock response data
+// temporaryemail is the entity, populated with mock response data
+// — call temporaryemail.data() for the record itself
 console.log(temporaryemail)
 ```
 
@@ -284,7 +287,7 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `domain` |  |
+| `domains` |  |
 
 Operations: list.
 
@@ -309,7 +312,7 @@ Create an instance: `const temporary_email = client.TemporaryEmail()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domain` | `any[]` |  |
+| `domains` | `any[]` |  |
 
 #### Example: List
 

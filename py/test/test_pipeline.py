@@ -16,11 +16,11 @@
 import pytest
 
 from friedapps_sdk import FriedAppsSDK
-from core.error import FriedAppsError
-from core.result import FriedAppsResult
-from core.response import FriedAppsResponse
-from core.spec import FriedAppsSpec
-from feature.base_feature import FriedAppsBaseFeature
+from friedapps_sdk.core.error import FriedAppsError
+from friedapps_sdk.core.result import FriedAppsResult
+from friedapps_sdk.core.response import FriedAppsResponse
+from friedapps_sdk.core.spec import FriedAppsSpec
+from friedapps_sdk.feature.base_feature import FriedAppsBaseFeature
 
 
 def _client():

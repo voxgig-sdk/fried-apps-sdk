@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ FriedAppsUtility.registrar = ->(u) {
   u.prepare_params = FriedAppsUtilities::PrepareParams
   u.prepare_path = FriedAppsUtilities::PreparePath
   u.prepare_query = FriedAppsUtilities::PrepareQuery
+  u.graphql_body = FriedAppsUtilities::GraphqlBody
+  u.graphql_errors = FriedAppsUtilities::GraphqlErrors
   u.result_basic = FriedAppsUtilities::ResultBasic
   u.result_body = FriedAppsUtilities::ResultBody
   u.result_headers = FriedAppsUtilities::ResultHeaders

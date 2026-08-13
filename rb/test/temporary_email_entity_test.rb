@@ -62,7 +62,7 @@ class TemporaryEmailEntityTest < Minitest::Test
     # The basic flow consumes synthetic IDs from the fixture. In live mode
     # without an *_ENTID env override, those IDs hit the live API and 4xx.
     if setup[:synthetic_only]
-      skip "live entity test uses synthetic IDs from fixture — set FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID JSON to run live"
+      skip "live entity test uses synthetic IDs from fixture — set FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID JSON to run live"
       return
     end
     client = setup[:client]
@@ -111,22 +111,22 @@ def temporary_email_basic_setup(extra)
   # Detect ENTID env override before envOverride consumes it. When live
   # mode is on without a real override, the basic test runs against synthetic
   # IDs from the fixture and 4xx's. Surface this so the test can skip.
-  entid_env_raw = ENV["FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID"]
+  entid_env_raw = ENV["FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID"]
   idmap_overridden = !entid_env_raw.nil? && entid_env_raw.strip.start_with?("{")
 
   env = Runner.env_override({
-    "FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID" => idmap,
-    "FRIEDAPPS_TEST_LIVE" => "FALSE",
-    "FRIEDAPPS_TEST_EXPLAIN" => "FALSE",
+    "FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID" => idmap,
+    "FRIED_APPS_TEST_LIVE" => "FALSE",
+    "FRIED_APPS_TEST_EXPLAIN" => "FALSE",
   })
 
   idmap_resolved = Helpers.to_map(
-    env["FRIEDAPPS_TEST_TEMPORARY_EMAIL_ENTID"])
+    env["FRIED_APPS_TEST_TEMPORARY_EMAIL_ENTID"])
   if idmap_resolved.nil?
     idmap_resolved = Helpers.to_map(idmap)
   end
 
-  if env["FRIEDAPPS_TEST_LIVE"] == "TRUE"
+  if env["FRIED_APPS_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
       },
@@ -135,13 +135,13 @@ def temporary_email_basic_setup(extra)
     client = FriedAppsSDK.new(Helpers.to_map(merged_opts))
   end
 
-  live = env["FRIEDAPPS_TEST_LIVE"] == "TRUE"
+  live = env["FRIED_APPS_TEST_LIVE"] == "TRUE"
   {
     client: client,
     data: entity_data,
     idmap: idmap_resolved,
     env: env,
-    explain: env["FRIEDAPPS_TEST_EXPLAIN"] == "TRUE",
+    explain: env["FRIED_APPS_TEST_EXPLAIN"] == "TRUE",
     live: live,
     synthetic_only: live && !idmap_overridden,
     now: (Time.now.to_f * 1000).to_i,
