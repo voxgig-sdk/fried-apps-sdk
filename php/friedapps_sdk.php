@@ -40,7 +40,7 @@ class FriedAppsSDK
         $utility = new FriedAppsUtility();
         $this->_utility = $utility;
 
-        $config = FriedAppsConfig::make_config();
+        $config = FriedAppsConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

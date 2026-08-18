@@ -15,7 +15,7 @@ require_relative "../FriedApps_sdk"
 module FriedAppsFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = FriedAppsConfig.make_config["feature"]
+    f = FriedAppsConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

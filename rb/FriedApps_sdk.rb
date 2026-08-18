@@ -28,7 +28,7 @@ class FriedAppsSDK
     utility = FriedAppsUtility.new
     @_utility = utility
 
-    config = FriedAppsConfig.make_config
+    config = FriedAppsConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

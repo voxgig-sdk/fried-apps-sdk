@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://api.friedapps.com',
+    base: "https://api.friedapps.com",
 
     headers: {
       "content-type": "application/json"
@@ -55,11 +55,8 @@ class Config {
     "temporary_email": {
       "fields": [
         {
-          "active": true,
           "name": "domains",
-          "req": false,
-          "type": "`$ARRAY`",
-          "index$": 0
+          "type": "`$ARRAY`"
         }
       ],
       "name": "temporary_email",
@@ -69,7 +66,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "active": true,
               "args": {},
               "kind": "http",
               "method": "GET",
@@ -82,11 +78,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body.domains`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "list"
+          ]
         }
       },
       "relations": {

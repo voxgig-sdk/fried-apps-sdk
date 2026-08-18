@@ -1,5 +1,8 @@
 -- FriedApps SDK configuration
 
+-- Build a fresh, fully materialised config table. Every call rebuilds the
+-- whole structure, so prefer require("config_shared") unless you need a
+-- private copy you intend to mutate.
 local function make_config()
   return {
     main = {
@@ -25,11 +28,8 @@ local function make_config()
       ["temporary_email"] = {
         ["fields"] = {
           {
-            ["active"] = true,
             ["name"] = "domains",
-            ["req"] = false,
             ["type"] = "`$ARRAY`",
-            ["index$"] = 0,
           },
         },
         ["name"] = "temporary_email",
@@ -39,7 +39,6 @@ local function make_config()
             ["name"] = "list",
             ["points"] = {
               {
-                ["active"] = true,
                 ["args"] = {},
                 ["kind"] = "http",
                 ["method"] = "GET",
@@ -53,10 +52,8 @@ local function make_config()
                   ["req"] = "`reqdata`",
                   ["res"] = "`body.domains`",
                 },
-                ["index$"] = 0,
               },
             },
-            ["key$"] = "list",
           },
         },
         ["relations"] = {
