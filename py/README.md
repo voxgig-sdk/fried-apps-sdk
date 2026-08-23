@@ -243,7 +243,7 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `domains` |  |
+| `domains` | List of available email domains |
 
 Operations: List.
 
@@ -268,7 +268,7 @@ Create an instance: `temporary_email = client.TemporaryEmail()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domains` | `list` |  |
+| `domains` | `list` | List of available email domains |
 
 #### Example: List
 

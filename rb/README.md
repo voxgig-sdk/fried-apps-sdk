@@ -237,7 +237,7 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `domains` |  |
+| `domains` | List of available email domains |
 
 Operations: List.
 
@@ -262,7 +262,7 @@ Create an instance: `temporary_email = client.TemporaryEmail`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domains` | `Array` |  |
+| `domains` | `Array` | List of available email domains |
 
 #### Example: List
 

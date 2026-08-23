@@ -33,6 +33,9 @@ class FriedAppsConfig
         return [
             "main" => [
                 "name" => "FriedApps",
+                "slug" => "fried-apps",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
@@ -55,6 +58,7 @@ class FriedAppsConfig
           'fields' => [
             [
               'name' => 'domains',
+              'short' => 'List of available email domains',
               'type' => '`$ARRAY`',
             ],
           ],

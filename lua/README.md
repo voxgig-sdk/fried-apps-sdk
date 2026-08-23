@@ -231,7 +231,7 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `domains` |  |
+| `domains` | List of available email domains |
 
 Operations: List.
 
@@ -256,7 +256,7 @@ Create an instance: `local temporary_email = client:TemporaryEmail(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domains` | `table` |  |
+| `domains` | `table` | List of available email domains |
 
 #### Example: List
 

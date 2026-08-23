@@ -7,6 +7,9 @@ local function make_config()
   return {
     main = {
       name = "FriedApps",
+      slug = "fried-apps",
+      version = "0.0.1",
+      target = "lua",
     },
     feature = {
       ["test"] = {
@@ -29,6 +32,7 @@ local function make_config()
         ["fields"] = {
           {
             ["name"] = "domains",
+            ["short"] = "List of available email domains",
             ["type"] = "`$ARRAY`",
           },
         },

@@ -92,7 +92,7 @@ $temporary_email = $client->TemporaryEmail();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `domains` | `array` | No |  |
+| `domains` | `array` | No | List of available email domains |
 
 ### Operations
 

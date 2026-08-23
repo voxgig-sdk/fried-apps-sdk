@@ -36,6 +36,7 @@
               "active": true,
               "name": "domains",
               "req": false,
+              "short": "List of available email domains",
               "type": "`$ARRAY`"
             }
           ],

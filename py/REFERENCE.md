@@ -87,7 +87,7 @@ temporary_email = client.TemporaryEmail()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `domains` | `list` | No |  |
+| `domains` | `list` | No | List of available email domains |
 
 ### Operations
 

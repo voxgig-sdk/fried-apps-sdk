@@ -19,6 +19,9 @@ module FriedAppsConfig
     {
       "main" => {
         "name" => "FriedApps",
+        "slug" => "fried-apps",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,6 +44,7 @@ module FriedAppsConfig
           "fields" => [
             {
               "name" => "domains",
+              "short" => "List of available email domains",
               "type" => "`$ARRAY`",
             },
           ],

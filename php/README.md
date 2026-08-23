@@ -247,7 +247,7 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `domains` |  |
+| `domains` | List of available email domains |
 
 Operations: List.
 
@@ -272,7 +272,7 @@ Create an instance: `$temporary_email = $client->TemporaryEmail();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `domains` | `array` |  |
+| `domains` | `array` | List of available email domains |
 
 #### Example: List
 

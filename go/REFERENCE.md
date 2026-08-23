@@ -98,7 +98,7 @@ fmt.Println(temporaryEmail.GetName()) // "temporary_email"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `domains` | `[]any` | No |  |
+| `domains` | `[]any` | No | List of available email domains |
 
 ### Operations
 
