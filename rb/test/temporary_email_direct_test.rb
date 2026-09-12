@@ -67,8 +67,10 @@ def temporary_email_direct_setup(mockres)
   live = env["FRIED_APPS_TEST_LIVE"] == "TRUE"
 
   if live
-    merged_opts = {
-    }
+    # Merged so the generated fields win: sdk-test-control.json's
+    # test.client.options adds to the live client, it does not redirect it.
+    merged_opts = Runner.live_client_options.merge({
+    })
     client = FriedAppsSDK.new(merged_opts)
     return {
       client: client,

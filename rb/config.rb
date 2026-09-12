@@ -60,15 +60,23 @@ module FriedAppsConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/temp-mail/domains",
-                  "parts" => [
-                    "temp-mail",
-                    "domains",
+                  "segments" => [
+                    {
+                      "lit" => "temp-mail",
+                    },
+                    {
+                      "lit" => "domains",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body.domains`",
                   },
+                  "parts" => [
+                    "temp-mail",
+                    "domains",
+                  ],
                 },
               ],
             },

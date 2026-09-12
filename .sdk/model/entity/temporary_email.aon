@@ -21,9 +21,13 @@ main: kit: entity: temporary_email: {
         {
           method: "GET"
           orig: "/temp-mail/domains"
-          parts: [
-            "temp-mail"
-            "domains"
+          segments: [
+            {
+              lit: "temp-mail"
+            }
+            {
+              lit: "domains"
+            }
           ]
           transform: {
             req: "`reqdata`"
