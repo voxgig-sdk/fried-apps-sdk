@@ -781,7 +781,7 @@
             "registry": {
               "active": false,
               "name": "npm",
-              "package": "",
+              "package": "@voxgig-sdk/fried-apps-sdk",
               "state": "pending",
               "url": "https://registry.npmjs.org",
               "vault": {

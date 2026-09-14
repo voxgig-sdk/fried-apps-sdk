@@ -105,7 +105,7 @@ local results, err = client:TemporaryEmail():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
+| TypeScript | `@voxgig-sdk/fried-apps-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
 | Python | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
 | PHP | `voxgig-sdk/fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/fried-apps-sdk/go` | `go get github.com/voxgig-sdk/fried-apps-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:TemporaryEmail():list()
 ### TypeScript
 
 ```ts
-import { FriedAppsSDK } from '@voxgig-sdk/fried-apps'
+import { FriedAppsSDK } from '@voxgig-sdk/fried-apps-sdk'
 
 const client = new FriedAppsSDK()
 

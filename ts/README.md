@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { FriedAppsSDK } from '@voxgig-sdk/fried-apps'
+import { FriedAppsSDK } from '@voxgig-sdk/fried-apps-sdk'
 
 const client = new FriedAppsSDK()
 ```
@@ -403,7 +403,7 @@ fried-apps/
 Import the SDK from the package root:
 
 ```ts
-import { FriedAppsSDK } from '@voxgig-sdk/fried-apps'
+import { FriedAppsSDK } from '@voxgig-sdk/fried-apps-sdk'
 ```
 
 ### Entity state
