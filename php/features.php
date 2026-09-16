@@ -4,7 +4,10 @@ declare(strict_types=1);
 // FriedApps SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class FriedAppsFeatures
@@ -14,8 +17,14 @@ class FriedAppsFeatures
         switch ($name) {
             case "base":
                 return new FriedAppsBaseFeature();
+            case "ratelimit":
+                return new FriedAppsRatelimitFeature();
+            case "retry":
+                return new FriedAppsRetryFeature();
             case "test":
                 return new FriedAppsTestFeature();
+            case "timeout":
+                return new FriedAppsTimeoutFeature();
             default:
                 return new FriedAppsBaseFeature();
         }
@@ -31,7 +40,10 @@ class FriedAppsFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

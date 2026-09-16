@@ -18,5 +18,68 @@
         "domains": []
       }
     }
+  },
+  "requests": {
+    "GET /temp-mail/domains": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getDomains",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "domainsExample": {
+                    "value": {
+                      "domains": [
+                        "example1.com",
+                        "example2.com",
+                        "example3.com"
+                      ]
+                    }
+                  }
+                },
+                "schema": {
+                  "properties": {
+                    "domains": {
+                      "description": "List of available email domains",
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with list of available domains"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    },
+                    "message": {
+                      "description": "Detailed error description",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }

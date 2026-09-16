@@ -1,12 +1,18 @@
 # FriedApps SDK feature factory
 
 from friedapps_sdk.feature.base_feature import FriedAppsBaseFeature
+from friedapps_sdk.feature.ratelimit_feature import FriedAppsRatelimitFeature
+from friedapps_sdk.feature.retry_feature import FriedAppsRetryFeature
 from friedapps_sdk.feature.test_feature import FriedAppsTestFeature
+from friedapps_sdk.feature.timeout_feature import FriedAppsTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: FriedAppsBaseFeature(),
+    "ratelimit": lambda: FriedAppsRatelimitFeature(),
+    "retry": lambda: FriedAppsRetryFeature(),
     "test": lambda: FriedAppsTestFeature(),
+    "timeout": lambda: FriedAppsTimeoutFeature(),
 }
 
 
