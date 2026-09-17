@@ -105,12 +105,12 @@ local results, err = client:TemporaryEmail():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/fried-apps-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
-| Python | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
-| PHP | `voxgig-sdk/fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
+| TypeScript | `@voxgig-sdk/fried-apps-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/tags) |
+| Python | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/tags) |
+| PHP | `voxgig-sdk/fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/fried-apps-sdk/go` | `go get github.com/voxgig-sdk/fried-apps-sdk/go@latest` |
-| Ruby | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
-| Lua | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/releases) |
+| Ruby | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/tags) |
+| Lua | `voxgig-sdk-fried-apps` | publish pending — [install from git tag](https://github.com/voxgig-sdk/fried-apps-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/fried-apps-sdk/go-cli` | `go install github.com/voxgig-sdk/fried-apps-sdk/go-cli/cmd/fried-apps@latest` |
 | Go MCP server | `github.com/voxgig-sdk/fried-apps-sdk/go-mcp` | `go get github.com/voxgig-sdk/fried-apps-sdk/go-mcp@latest` |
 

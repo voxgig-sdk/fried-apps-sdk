@@ -127,9 +127,9 @@ class Config {
 
     entity: {
       
-      temporary_email: {
-      },
-
+        temporary_email: {
+        },
+  
     }
   }
 
