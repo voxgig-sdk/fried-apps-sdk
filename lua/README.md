@@ -43,7 +43,7 @@ local temporaryemails, err = client:TemporaryEmail():list()
 if err then error(err) end
 
 for _, item in ipairs(temporaryemails) do
-  print(item["domains"])
+  print(item)
 end
 ```
 

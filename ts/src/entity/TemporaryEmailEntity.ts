@@ -19,7 +19,6 @@ import type {
   TemporaryEmailListMatch,
 } from '../FriedAppsTypes'
 
-// TODO: needs Entity superclass
 class TemporaryEmailEntity extends FriedAppsEntityBase<TemporaryEmail> {
 
   constructor(client: FriedAppsSDK, entopts: any) {

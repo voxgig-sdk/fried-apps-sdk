@@ -116,8 +116,9 @@ def make_config():
         "fields": [
           {
             "name": "domains",
-            "short": "List of available email domains",
+            "title": "Domains",
             "type": "`$ARRAY`",
+            "short": "List of available email domains",
           },
         ],
         "name": "temporary_email",
@@ -127,7 +128,6 @@ def make_config():
             "name": "list",
             "points": [
               {
-                "args": {},
                 "kind": "http",
                 "method": "GET",
                 "orig": "/temp-mail/domains",
@@ -139,15 +139,17 @@ def make_config():
                     "lit": "domains",
                   },
                 ],
-                "select": {},
-                "transform": {
-                  "req": "`reqdata`",
-                  "res": "`body.domains`",
-                },
                 "parts": [
                   "temp-mail",
                   "domains",
                 ],
+                "rename": {},
+                "transform": {
+                  "req": "`reqdata`",
+                  "res": "`body.domains`",
+                },
+                "args": {},
+                "select": {},
               },
             ],
           },

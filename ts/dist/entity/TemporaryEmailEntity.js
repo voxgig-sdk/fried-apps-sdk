@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TemporaryEmailEntity = void 0;
 const FriedAppsEntityBase_1 = require("../FriedAppsEntityBase");
-// TODO: needs Entity superclass
 class TemporaryEmailEntity extends FriedAppsEntityBase_1.FriedAppsEntityBase {
     constructor(client, entopts) {
         super(client, entopts);

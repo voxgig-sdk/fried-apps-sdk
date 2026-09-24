@@ -1,0 +1,49 @@
+# Entity: temporary_email
+
+main: kit: entity: temporary_email: {
+
+  alias: field: {}
+
+  fields: {
+    domains: {
+      h: "Domains"
+      n: "domains"
+      r: false
+      sh: "List of available email domains"
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "temporary_email"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /temp-mail/domains"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/temp-mail/domains"
+          s: [
+            {
+              lit: "temp-mail"
+            }
+            {
+              lit: "domains"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.domains`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}
